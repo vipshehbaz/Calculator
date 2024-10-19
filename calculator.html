@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    input {
+      margin-top: 15px;
+      width: 50%;
+      height: 50px;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  </style>
+</head>
+
+<body align="center">
+  <input type="number" placeholder="enter first number" id="firstNum" /><br>
+  <input type="number" placeholder="enter second number" id="secondNum" /><br>
+  <input type="text" placeholder="eg(+,-,*,/)" id="opera" /><br>
+  <input type="submit" value="  Calculate" onclick="demo()" />
+  <h1 id="answer"></h1>
+</body>
+<script>
+  
+  function demo() {
+    let firstNum = document.getElementById("firstNum").value;
+    let secondNum = document.getElementById("secondNum").value;
+    let opera = document.getElementById("opera").value;
+
+    let result = eval(firstNum + opera + secondNum)
+
+    document.getElementById("answer").innerHTML = "Answer is  " + result;
+  }
+</script>
+
+</html>
